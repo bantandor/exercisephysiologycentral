@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Quiz</h1>
+
+  <div id="quiz">
+    <div class="question">
+      <p>1. What is glycolysis?</p>
+      <input type="radio" name="question1" value="Anaerobic metabolic pathway">Anaerobic metabolic pathway<br>
+      <input type="radio" name="question1" value="Aerobic metabolic pathway">Aerobic metabolic pathway<br>
+      <input type="radio" name="question1" value="A type of hormone">A type of hormone<br>
+      <input type="radio" name="question1" value="A type of enzyme">A type of enzyme<br>
+      <button id="cbutton" onclick="checkAnswer(1)" style="background-color: #BCAA71; color: #3A1807; 
+      padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-top: 10px; display: block;">Check</button>
+      <p class="result" id="result1"></p>
+    </div>
+    <div class="question">
+      <p>2. What is the main product of glycolysis?</p>
+      <input type="radio" name="question2" value="Pyruvate">Pyruvate<br>
+      <input type="radio" name="question2" value="Glucose">Glucose<br>
+      <input type="radio" name="question2" value="Lactic acid">Lactic acid<br>
+      <input type="radio" name="question2" value="Adenosine triphosphate (ATP)">Adenosine triphosphate (ATP)<br>
+      <button id="cbutton" onclick="checkAnswer(2)" style="background-color: #BCAA71; color: #3A1807; 
+      padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-top: 10px; display: block;">Check</button>
+      <p class="result" id="result2"></p>
+    </div>
+    <div class="question">
+      <p>3. Which of the following is NOT a reactant in glycolysis?</p>
+      <input type="radio" name="question3" value="Glucose">Glucose<br>
+      <input type="radio" name="question3" value="NAD+">NAD+<br>
+      <input type="radio" name="question3" value="Oxygen">Oxygen<br>
+      <input type="radio" name="question3" value="Phosphate">Phosphate<br>
+      <button id="cbutton" onclick="checkAnswer(3)" style="background-color: #BCAA71; color: #3A1807; 
+      padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-top: 10px; display: block;">Check</button>
+      <p class="result" id="result3"></p>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswer(questionNum) {
+      var questions = [
+        {question: "What is glycolysis?", answer: "Anaerobic metabolic pathway"},
+        {question: "What is the main product of glycolysis?", answer: "Pyruvate"},
+        {question: "Which of the following is NOT a reactant in glycolysis?", answer: "Oxygen"}
+      ];
+      var radios = document.getElementsByName("question" + questionNum);
+      var result = document.getElementById("result" + questionNum);
+      var selected;
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          selected = radios[i].value;
+          break;
+        }
+      }
+      if (selected === questions[questionNum - 1].answer) {
+        result.innerHTML = "Correct";
+        result.classList.remove("incorrect");
+result.classList.add("correct");
+} else {
+result.innerHTML = "Try again";
+result.classList.remove("correct");
+result.classList.add("incorrect");
+}
+result.style.display = "block";
+}
+</script>
+
+</body>
+</html>
+       
