@@ -1,0 +1,50 @@
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+    background-color:  #3A1807;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  
+  a:hover {
+    background-color: rgb(188, 170, 113);
+  }
+  #message {
+    width: 800px;
+    font-size: 16px;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
+}  
+
+#logo {
+    width: 500px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+  }
