@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag and Drop</title>
+   <style>
+
+    body{ 
+      margin:0 auto; 
+      
+  }
+  .item {
+      width: 220px;
+      height: 20px;
+      color: #3A1807;
+      font-weight: bold;
+      background-color: #BCAA71;
+      text-align: center;
+      line-height: 80px;
+      border: 2px solid  #3A1807;
+      margin: 10px; /* add this */
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+     
+  }
+  
+  .dropbox {
+      width: 220px;
+      height: 20px;
+      border: 2px solid gray;
+      float: left;
+      margin: 10px; /* add this */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      
+  }
+  
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 135px;
+      
+      }
+      
+      .enzymes {
+          display: grid;
+          place-items: center;
+          font-style: italic;
+          font-weight: bold;
+          }
+          
+      
+     
+      .items-container {
+          padding: 20px;
+          flex-wrap: wrap;
+          margin-left: 0px;
+      }   
+      
+      .dropboxes-container {
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 100px; 
+          align-items: center;
+         
+          justify-content: center;
+          align-items: center;
+      } 
+      
+      .dragged {
+          opacity: 0.5;
+          }
+     
+      
+      .row {
+      display: flex;
+      width: 80%;
+      }
+  
+      /* for one row each coloums delete col-right and col-left*/
+      .col-right { 
+          display: flex;
+          width: 15%;
+          
+      }
+  
+      .col-left {
+          display: flex;
+          width: 30%;
+          height: 20%;
+          padding-top: 150px;
+          margin-bottom: 5px;
+      }
+  
+      .directions {
+          padding-top: 30px;
+          padding-left: 0px;
+          text-align: center;
+          font-weight: bold;
+      }
+  
+      .intoduction {
+          padding-top: 30px;
+          padding-left: 60px;
+          padding-right: 60px;
+          text-align: center;
+      }
+  
+      #result {
+      padding-left: 75px;
+      font-size: x-large;
+      font-weight: bold;
+    
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intoduction">Welcome Exercise Science students of SMSU! This interactive app is specially designed for you to help you enhance your knowledge 
+      and skills in the field. It can also be beneficial for students from other institutions. We hope you find it useful and enjoyable 
+      as you learn and grow in your field of study. Happy practicing! Dr.Taner</div>
+   
+    <div class="directions">Drag and drop the molecules into boxes on the right</div>
+    <div class="container">
+      <div class="row">
+       
+        <div class="col-left">
+          <div class="items-container">
+            <div id="result"></div>
+            <div class="item" id="item1" draggable="true" data-target="dropbox1">Glucose</div>
+            <div class="item" id="item2" draggable="true" data-target="dropbox2">Glucose - 6 - Phosphate</div>
+            <div class="item" id="item3" draggable="true" data-target="dropbox3">Fructose - 6 - Phosphate</div>
+            <div class="item" id="item4" draggable="true" data-target="dropbox4">Fructose - 1,6 - Phosphate</div>
+            <div class="item" id="item5" draggable="true" data-target="dropbox5">G3P / DHAP</div>
+            <div class="item" id="item6" draggable="true" data-target="dropbox6">Phosphoenolpyruvate</div>
+            <div class="item" id="item7" draggable="true" data-target="dropbox7">Pyruvate</div>
+            <div class="item" id="item8" draggable="true" data-target="dropbox8">Lactate</div>
+           
+           
+            
+          </div>
+        </div>
+        
+        <div class="col-right">
+          <div class="dropboxes-container">
+            <div class="dropbox" id="dropbox1"></div>
+            <div class="enzymes" id="enzymes">Hexokinase</div>
+            <img src="smallarrowdown.png" height="30" width="20">
+            <div class="dropbox" id="dropbox2"></div>
+            <div class="enzymes" id="enzymes">Phosphohexose isomerase</div>
+            <img src="smallarrowdown.png" height="30" width="20">
+            <div class="dropbox" id="dropbox3"></div>
+            <div class="enzymes" id="enzymes">Phosphofructokinase</div>
+            <img src="smallarrowdown.png" height="30" width="20">
+            <div class="dropbox" id="dropbox4"></div>
+            <div class="enzymes" id="enzymes">Aldolase</div>
+            <img src="smallarrowdown.png" height="30" width="20">
+            <div class="dropbox" id="dropbox5"></div>
+            <img src="smallarrowdown.png" height="30" width="20">
+            <img src="smallarrowdown.png" height="30" width="20">
+            <img src="smallarrowdown.png" height="30" width="20">
+           
+            <img src="smallarrowdown.png" height="30" width="20">
+            <div class="dropbox" id="dropbox6"></div>
+            <div class="enzymes" id="enzymes">Pyruvate Kinase</div>
+            <img src="smallarrowdown.png" height="30" width="20">
+            <div class="dropbox" id="dropbox7"></div>
+            <div class="enzymes" id="enzymes">Lactate Dehydrogenase</div>
+            <img src="smallarrowdown.png" height="30" width="20">
+            <div class="dropbox" id="dropbox8"></div>
+           
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="ddrop_glycolysis_script.js"></script>
+  </body>
+</html>
