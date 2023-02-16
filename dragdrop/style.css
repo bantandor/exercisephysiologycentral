@@ -1,0 +1,110 @@
+#logo {
+    width: 500px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+
+#quiz-container {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+    border: 4px solid rgb(188, 170, 113)
+}
+
+#question {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#molecule {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top:15px;
+}
+
+#message {
+    width: 800px;
+    font-size: 16px;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+#animal-img {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#options {
+    display: flex;
+    justify-content: center;
+}
+
+.drop-box {
+    width: 250px;
+    height: 110px;
+    border: 2px solid rgb(188, 170, 113);
+    /*margin: 0 10px;*/
+    margin: 0 5px;
+    background-image: url("arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#options-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    color: #3A1807;
+    font-weight: bold;
+}
+
+.option {
+    background-color:#BCAA71;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+ 
+}
+
+.dropped-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#next-question-btn {
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin: 0 auto;
+    background-color: #3A1807;;
+}
+
+.button-container {
+    text-align: center;
+}
