@@ -113,3 +113,12 @@ body{
     font-weight: bold;
   
     }
+
+    .question{
+        flex-direction: column;
+        padding-left: 35px;
+    }
+
+    h1 {
+        padding-left: 35px;
+      }
